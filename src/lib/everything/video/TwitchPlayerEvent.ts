@@ -11,6 +11,10 @@ export enum TwitchPlayerEvent {
    */
   VIDEO_PLAY = 'video.play',
   /**
+   * Closed captions are found in the video content being played. This event will be emitted once for each new batch of captions, in sync with the corresponding video content. The event payload is a string containing the caption content.
+   */
+  CAPTIONS = 'captions',
+  /**
    * Video or stream ends.
    */
   ENDED = 'ended',
@@ -41,5 +45,9 @@ export enum TwitchPlayerEvent {
   /**
    * Player is ready to accept function calls.
    */
-  READY = 'ready'
+  READY = 'ready',
+  /**
+   * User has used the player controls to seek a VOD, the seek() method has been called, or live playback has seeked to sync up after being paused.
+   */
+  SEEK = 'seek',
 }

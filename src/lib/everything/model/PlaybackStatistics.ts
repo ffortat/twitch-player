@@ -1,8 +1,4 @@
 export interface PlaybackStatistics {
-  videoStatistics: VideoStatistics;
-}
-
-export interface VideoStatistics {
   backendVersion: string;
 
   bufferSize: number;

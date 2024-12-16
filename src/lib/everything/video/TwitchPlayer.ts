@@ -46,16 +46,14 @@ export class TwitchPlayer {
   }
 
   /**
-   * Disables the captions for the content that is currently playing.
-   * @deprecated Use with caution, not inculded in the official Twitch documentation.
+   * Disables display of Closed Captions.
    */
   public disableCaptions(): void {
     this._player?.disableCaptions();
   }
 
   /**
-   * Enables the captions for the content that is currently playing.
-   * @deprecated Use with caution, not inculded in the official Twitch documentation.
+   * Enables display of Closed Captions. Note captions will only display if they are included in the video content being played. See the CAPTIONS JavaScript Event for more info.
    */
   public enableCaptions(): void {
     this._player?.enableCaptions();
@@ -100,11 +98,9 @@ export class TwitchPlayer {
   }
 
   /**
-   * Retrieves the playback statistics for this player.
-   * The statistics contain information such as video FPS, resolution, latency and dropped frames.
-   * @deprecated Use with caution, not inculded in the official Twitch documentation.
+   * Returns an object with statistics on the embedded video player and the current live stream or VOD. See below for more info.
    */
-  public getPlaybackStatistics(): PlaybackStatistics | undefined {
+  public getPlaybackStats(): PlaybackStatistics | undefined {
     return this._player?.getPlaybackStats();
   }
 
